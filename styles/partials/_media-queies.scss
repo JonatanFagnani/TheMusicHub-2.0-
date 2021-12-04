@@ -122,7 +122,8 @@
 @media screen and (min-width: 992px) {
   /* HEADER */
   header {
-    background: rgba(0, 0, 0, 0.6);
+    background-image: url("../images/bg-hero.png");
+    background-size: cover;
     height: 8rem;
   }
 
