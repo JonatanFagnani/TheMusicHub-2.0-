@@ -4,19 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome! to TheMusicHub</title>
-    <link rel="icon" href="images/logo.png" />
+    <link rel="icon" href="../images/logo.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
   </head>
   <body>
+    <!-- HEADER -->
     <header>
       <div class="header-container">
         <div class="header-logo">
-          <img src="./images/logo.png" />
-          <a href="./index.html" class="logo-text">TheMusicHub</a>
+          <img src="../images/logo.png" />
+          <a href="../index.html" class="logo-text">TheMusicHub</a>
         </div>
         <nav class="nav-mobile">
           <div class="profile">
@@ -33,31 +34,34 @@
             <div class="background-overlay"></div>
             <div class="menu-overlay">
               <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./pages/playlist.html">Playlist</a></li>
-                <li><a href="./pages/top10.html">Top 10</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./playlist.html">Playlist</a></li>
+                <li><a href="./top10.html">Top 10</a></li>
                 <li role="separator"></li>
-                <li><a href="./pages/Login.html">Ingresar</a></li>
+                <li><a href="./Login.html">Ingresar</a></li>
                 <li><a href="#">Salir</a></li>
               </ul>
               <div class="menu-overlay-logo">
-                <img src="./images/logo.png" />
+                <img src="../images/logo.png" />
               </div>
             </div>
           </div>
         </nav>
+        <!-- Menu en Desktop -->
         <nav class="nav-desktop">
+          <!-- Menu Bar-->
           <ul>
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./pages/playlist.html">Playlist</a></li>
-            <li><a href="./pages/top10.html">Top 10</a></li>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./playlist.html">Playlist</a></li>
+            <li><a href="./top10.html">Top 10</a></li>
             <li role="separator"></li>
           </ul>
+          <!-- Perfil -->
           <div class="profile-container">
             <input type="checkbox" class="dropdown-menu-toggler" />
             <div class="dropdown-menu">
               <ul>
-                <li><a href="./pages/Login.html">Ingresar</a></li>
+                <li><a href="./Login.html">Ingresar</a></li>
                 <li><a href="#">Salir</a></li>
               </ul>
             </div>
@@ -86,88 +90,20 @@
     <section class="hero">
       <div class="hero-container">
         <div class="hero-content">
-          <h1 class="hero-title">Welcome! to TheMusicHub</h1>
-          <p class="hero-description">
-            Artistas, musicos, curadores, profesionales o por pura pasión, una
-            plataforma para todos y para cada uno. Ya sea para limpiar la casa,
-            encontrar tu proxima playlist favorita que inspire la mejor versión
-            de tu mismo y crear grandes cosas, aqui encontrarás todo y mucho
-            más; Conecta, inventiga, haz binge de tu proximo artista, genero o
-            guilty pleasure favorito!.
-          </p>
-          <button class="hero-button">
-            <a href="./pages/playlist.html">ME GUSTA COMO SE OYE ESO!</a>
-          </button>
+          <h1 class="hero-title">Nuestro Top 10 Songs!</h1>
+          <p class="hero-description">completa el siguiente formulario.</p>
         </div>
       </div>
     </section>
-    <!-- ALBUMS -->
-    <section class="albums">
-      <div class="albums-container">
-        <div class="albums-content">
-          <h2>Donde vive la musica</h2>
-          <p>Algunas de nuestras mejores playlist...</p>
-          <button><a href="./pages/playlist.html">DESCUBRE LA TUYA</a></button>
-        </div>
-        <div class="albums-cards-container">
-          <div class="album">
-            <img src="./images/90s.jpg" />
-            <div class="album-info">
-              <h2>Remember That Song?</h2>
-              <h4>Exitos de los 90's!</h4>
-              <a href="./pages/playlist.html">DESCUBRE MAS</a>
-            </div>
-          </div>
-          <div class="album">
-            <img src="images/dream.jpeg" />
-            <div class="album-info">
-              <h2>Songs to Dream Awake</h2>
-              <h4>Relajarse...de eso se trata!</h4>
-              <a href="./pages/playlist.html">DESCUBRE MAS</a>
-            </div>
-          </div>
-          <div class="album">
-            <img src="images/clasic.jpg" />
-            <div class="album-info">
-              <h2>Classical Music</h2>
-              <h4>Joyas de la A a la Z.</h4>
-              <a href="./pages/playlist.html">DESCUBRE MAS</a>
-            </div>
-          </div>
-          <div class="album">
-            <img src="images/gym.jpg" />
-            <div class="album-info">
-              <h2>Gym Time Baby!</h2>
-              <h4>Un Pump para tus oidos!.</h4>
-              <a href="./pages/playlist.html">DESCUBRE MAS</a>
-            </div>
-          </div>
-          <div class="album">
-            <img src="images/oldies.jpg" />
-            <div class="album-info">
-              <h2>Oldies To Sing Out Loud</h2>
-              <h4>Exitos que no podes dejar de escuchar!</h4>
-              <a href="./pages/playlist.html">DESCUBRE MAS</a>
-            </div>
-          </div>
-          <div class="album">
-            <img src="images/musical.jpg" />
-            <div class="album-info">
-              <h2>Musical Mood</h2>
-              <h4>Del Escenario a tus Oidos!</h4>
-              <a href="./pages/playlist.html">DESCUBRE MAS</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- ANIMACION CONCAT -->
+    <section class="concat-anim"></section>
     <!-- FOOTER -->
     <footer>
       <nav class="footer-nav">
         <div class="logo-footer">
           <div class="logoFooter">
             <div>
-              <img src="images/logo.png" />
+              <img src="../images/logo.png" />
             </div>
             <div>
               <p class="logo-text">TheMusicHub</p>
@@ -177,18 +113,23 @@
         <div class="social-icons">
           <ul>
             <li>
-              <a href="#"><img src="images/instagram-icon.svg" /></a>
+              <a href="#"><img src="../images/instagram-icon.svg" /></a>
             </li>
             <li>
-              <a href="#"><img src="images/twitter-icon.svg" /></a>
+              <a href="#"><img src="../images/twitter-icon.svg" /></a>
             </li>
             <li>
-              <a href="#"><img src="images/facebook-icon.svg" /></a>
+              <a href="#"><img src="../images/facebook-icon.svg" /></a>
             </li>
           </ul>
         </div>
       </nav>
     </footer>
-    <script src="./js/script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

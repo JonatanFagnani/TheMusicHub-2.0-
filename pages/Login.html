@@ -36,9 +36,9 @@
               <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./playlist.html">Playlist</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./top10.html">Top 10</a></li>
                 <li role="separator"></li>
-                <li><a href="#">Ingresar</a></li>
+                <li><a href="./Login.html">Ingresar</a></li>
                 <li><a href="#">Salir</a></li>
               </ul>
               <div class="menu-overlay-logo">
@@ -53,7 +53,7 @@
           <ul>
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="./playlist.html">Playlist</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="./top10.html">Top 10</a></li>
             <li role="separator"></li>
           </ul>
           <!-- Perfil -->
@@ -61,7 +61,7 @@
             <input type="checkbox" class="dropdown-menu-toggler" />
             <div class="dropdown-menu">
               <ul>
-                <li><a href="#">Ingresar</a></li>
+                <li><a href="./Login.html">Ingresar</a></li>
                 <li><a href="#">Salir</a></li>
               </ul>
             </div>
@@ -90,13 +90,59 @@
     <section class="hero">
       <div class="hero-container">
         <div class="hero-content">
-          <h1 class="hero-title">Dudas?... no lo dudes!</h1>
-          <p class="hero-description">completa el siguiente formulario.</p>
+          <h1 class="hero-title">May the music be with you..</h1>
+          <p class="hero-description">Se parte de la mejor parte!</p>
         </div>
       </div>
     </section>
-    <!-- FORMULARIO -->
-    <section class="formulario"></section>
+    <!-- REGISTRO & LOGIN -->
+    <section class="log-box">
+    <div class="login">
+      <form name="form-login" class="register-box">
+        <div class="title-form"><h1>Registrate</h1></div>
+        <div>
+          <input type="email" id="nombre" placeholder="Email" required />
+        </div>
+        <div>
+          <input type="password" id="pw" placeholder="Contraseña" required />
+        </div>
+        <input
+          id="rgstr_btn"
+          class="btn-log"
+          type="submit"
+          value="Registrar"
+          onclick="store()"
+        />
+      </form>
+    </div>
+    <div class="login">
+      <form name="form-login" class="register-box"">
+        <div class="title-form">
+          <h1>Ingresa</h1>
+        </div>
+        <div>
+          <input type="email" id="usuario" placeholder="Email" required />
+        </div>
+        <div>
+          <input
+            type="password"
+            id="usuarioPw"
+            placeholder="Contraseña"
+            required
+          />
+        </div>
+        <div>
+          <input
+            id="login_btn"
+            class="btn-log"
+            type="submit"
+            value="Ingresar"
+            onclick="check()"
+          />
+        </div>
+      </form>
+    </div>
+    </section>
     <!-- FOOTER -->
     <footer>
       <nav class="footer-nav">

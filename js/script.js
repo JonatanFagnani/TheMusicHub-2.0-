@@ -72,21 +72,43 @@ function update() {
 
 update();
 
-//formulario con jquery
+//REGISTRO & LOGIN
 
-$(".formulario").prepend(`
-<form id="myForm">
-Nombre
-<input type="text">
-Mail
-<input type="text">
-<input class="form-btn" type="submit">
-</form>`);
-$("#myForm").submit(function (e) {
-  e.preventDefault();
-  let hijos = $(e.target).children();
-  console.log(hijos[0].value);
-  console.log(hijos[1].value);
-});
+function store() {
+  let nombre = document.getElementById("nombre");
+  let pw = document.getElementById("pw");
 
-//lista
+  if (nombre.value.length == 0) {
+    alert("Completa el campo email");
+  } else if (pw.value.length == 0) {
+    alert("Completa el campo contraseña");
+  } else if (nombre.value.length == 0 && pw.value.length == 0) {
+    alert("Por favor completa tu email y contraseña");
+  } else {
+    sessionStorage.setItem("nombre", nombre.value);
+    sessionStorage.setItem("pw", pw.value);
+    alert("Cuenta creada con exito!");
+  }
+}
+
+//Buscar Usuario y Pass registrado
+function check() {
+  let storedNombre = sessionStorage.getItem("nombre");
+  let storedPw = sessionStorage.getItem("pw");
+
+  let usuario = document.getElementById("usuario");
+  let usuarioPw = document.getElementById("usuarioPw");
+
+  if (usuario.value == storedNombre && usuarioPw.value == storedPw) {
+    alert(`Bienvenido ${storedNombre}!`);
+  } else {
+    alert("Usuario no encotrado, registrate!.");
+  }
+}
+
+//Animacion Concatenada
+
+//Agreguemos un párrafo con jQuery
+$(".concat-anim").prepend('<p id="musicForce">May the music be with you!</p>');
+//Declaración de métodos encadenados
+$("#musicForce").css("font-size", "5rem").fadeIn(2000).fadeOut(2000);

@@ -1091,4 +1091,71 @@ ul {
     width: 117rem;
   }
 }
+
+.log-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title-form {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 0.1rem var(--black);
+}
+
+.btn-log {
+  padding: 2rem 6rem;
+  border: none;
+  border-radius: 3rem;
+  color: var(--white);
+  background: var(--green2);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+#nombre,
+#pw,
+#usuario,
+#usuarioPw {
+  margin-top: 2rem;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.login {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
 /*# sourceMappingURL=styles.css.map */
