@@ -51,7 +51,6 @@ let playlist = [
 ];
 
 function update() {
-  //algo de JQuery
   let mainGenderinput = $("#genderFav :selected").text();
   if (mainGenderinput === "Clásicos") {
     document.getElementById("playlistsrc").src = playlist[0].ruta;
@@ -106,9 +105,37 @@ function check() {
   }
 }
 
-//Animacion Concatenada
+//Log Out y Clear SS
 
-//Agreguemos un párrafo con jQuery
-$(".concat-anim").prepend('<p id="musicForce">May the music be with you!</p>');
-//Declaración de métodos encadenados
-$("#musicForce").css("font-size", "5rem").fadeIn(2000).fadeOut(2000);
+function clearss() {
+  sessionStorage.clear();
+}
+
+//Top 10
+
+const URL = "http://127.0.0.1:5500/js/top10.json";
+
+$.get(URL, function (respuesta, estado) {
+  if (estado == "success") {
+    let misDatos = respuesta;
+    for (const dato of misDatos) {
+      $(".top-10").append(`
+      <h5>${dato.puesto}</h5>
+      <iframe
+        id="top10-song"
+        src="${dato.ruta}"
+        width="100%"
+        height="80"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      ></iframe>
+                `);
+    }
+    $("h5").css({
+      "font-size": "5rem",
+      "background-color": "black",
+      color: "white ",
+    });
+  }
+});
