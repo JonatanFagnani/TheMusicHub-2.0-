@@ -1,15 +1,3 @@
-//Menu hamburguesa en mobile
-
-const body = document.body;
-
-const hamburgerToggler = document.querySelector(".toggler");
-
-hamburgerToggler.addEventListener("change", (e) => {
-  e.target.checked
-    ? (body.style.overflowY = "hidden")
-    : (body.style.overflowY = "scroll");
-});
-
 //embed de spotify
 
 let playlist = [
@@ -78,30 +66,38 @@ function store() {
   let pw = document.getElementById("pw");
 
   if (nombre.value.length == 0) {
-    alert("Completa el campo email");
+    $(".popup").append(`<h3>Completa el campo email</h3>`);
+    $("h3").fadeOut(1000);
   } else if (pw.value.length == 0) {
-    alert("Completa el campo contraseña");
+    $(".popup").append(`<h3>Completa el campo contraseña</h3>`);
+    $("h3").fadeOut(1000);
   } else if (nombre.value.length == 0 && pw.value.length == 0) {
-    alert("Por favor completa tu email y contraseña");
+    $(".popup").append(`<h3>Por favor completa tu email y contraseña</h3>`);
+    $("h3").fadeOut(1000);
   } else {
-    sessionStorage.setItem("nombre", nombre.value);
-    sessionStorage.setItem("pw", pw.value);
-    alert("Cuenta creada con exito!");
+    localStorage.setItem("nombre", nombre.value);
+    localStorage.setItem("pw", pw.value);
+    $(".popup").append(`<h3>Cuenta creada con exito!.</h3>`);
+    $("h3").fadeOut(1000);
   }
 }
 
 //Buscar Usuario y Pass registrado
+
 function check() {
-  let storedNombre = sessionStorage.getItem("nombre");
-  let storedPw = sessionStorage.getItem("pw");
+  let storedNombre = localStorage.getItem("nombre");
+  let storedPw = localStorage.getItem("pw");
 
   let usuario = document.getElementById("usuario");
   let usuarioPw = document.getElementById("usuarioPw");
 
   if (usuario.value == storedNombre && usuarioPw.value == storedPw) {
-    alert(`Bienvenido ${storedNombre}!`);
+    $(".popup").append(`<h3>Bienvenido ${storedNombre}!</h3>`);
+    $("h3").fadeOut(3000);
+    $(".displayUser").append(`<h3>${storedNombre}</h3>`);
   } else {
-    alert("Usuario no encotrado, registrate!.");
+    $(".popup").append(`<h3>Usuario no encotrado, registrate!.</h3>`);
+    $("h3").fadeOut(1000);
   }
 }
 
@@ -138,4 +134,16 @@ $.get(URL, function (respuesta, estado) {
       color: "white ",
     });
   }
+});
+
+//Menu hamburguesa en mobile
+
+const body = document.body;
+
+const hamburgerToggler = document.querySelector(".toggler");
+
+hamburgerToggler.addEventListener("change", (e) => {
+  e.target.checked
+    ? (body.style.overflowY = "hidden")
+    : (body.style.overflowY = "scroll");
 });

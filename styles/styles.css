@@ -468,6 +468,10 @@ svg {
           transform: rotate(180deg);
 }
 
+.puestos {
+  font-size: 10rem;
+}
+
 /********
  * HERO *
  ********/
@@ -1178,5 +1182,14 @@ ul {
     font-weight: 600;
     margin-left: 1rem;
   }
+}
+
+.popup h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.displayUser {
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */

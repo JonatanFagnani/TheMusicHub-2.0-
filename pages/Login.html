@@ -60,10 +60,10 @@
           <div class="profile-container">
             <input type="checkbox" class="dropdown-menu-toggler" />
             <div class="dropdown-menu">
+              <p class="displayUser"></p>
               <ul>
                 <li><a href="./Login.html">Ingresar</a></li>
-                <li><a onclick="clearss()"
-                  href="../index.html">Salir</a></li>
+                <li><a onclick="clearss()" href="../index.html">Salir</a></li>
               </ul>
             </div>
             <div class="profile">
@@ -98,52 +98,53 @@
     </section>
     <!-- REGISTRO & LOGIN -->
     <section class="log-box">
-    <div class="login">
-      <form name="form-login" class="register-box">
-        <div class="title-form"><h1>Registrate</h1></div>
-        <div>
-          <input type="email" id="nombre" placeholder="Email" required />
-        </div>
-        <div>
-          <input type="password" id="pw" placeholder="Contraseña" required />
-        </div>
-        <input
-          id="rgstr_btn"
-          class="btn-log"
-          type="submit"
-          value="Registrar"
-          onclick="store()"
-        />
-      </form>
-    </div>
-    <div class="login">
-      <form name="form-login" class="register-box"">
-        <div class="title-form">
-          <h1>Ingresa</h1>
-        </div>
-        <div>
-          <input type="email" id="usuario" placeholder="Email" required />
-        </div>
-        <div>
+      <div class="login">
+        <div name="form-login" class="register-box" id="registrar">
+          <div class="title-form"><h1>Registrate</h1></div>
+          <div>
+            <input type="email" id="nombre" placeholder="Email" required />
+          </div>
+          <div>
+            <input type="password" id="pw" placeholder="Contraseña" required />
+          </div>
           <input
-            type="password"
-            id="usuarioPw"
-            placeholder="Contraseña"
-            required
-          />
-        </div>
-        <div>
-          <input
-            id="login_btn"
+            id="rgstr_btn"
             class="btn-log"
             type="submit"
-            value="Ingresar"
-            onclick="check()"
+            value="Registrar"
+            onclick="store()"
           />
         </div>
-      </form>
-    </div>
+      </div>
+      <div class="login">
+        <div name="form-login" class="register-box">
+          <div class="title-form">
+            <h1>Ingresa</h1>
+          </div>
+          <div>
+            <input type="email" id="usuario" placeholder="Email" required />
+          </div>
+          <div>
+            <input
+              type="password"
+              id="usuarioPw"
+              placeholder="Contraseña"
+              required
+            />
+          </div>
+          <div>
+            <input
+              id="login_btn"
+              class="btn-log"
+              type="submit"
+              value="Ingresar"
+              onclick="check()"
+            />
+          </div>
+        </div>
+      </div>
     </section>
+    <div class="popup"></div>
     <!-- FOOTER -->
     <footer>
       <nav class="footer-nav">
