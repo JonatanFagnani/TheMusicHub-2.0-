@@ -104,7 +104,7 @@ function check() {
 //Log Out y Clear SS
 
 function clearss() {
-  sessionStorage.clear();
+  localStorage.clear();
 }
 
 //Top 10
